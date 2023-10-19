@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="container mx-auto">
                 <div className="footer my-10">
                     <div className="">
-                        <img src={logo} alt="" />
+                        <img className='w-[150px]' src={logo} alt="" />
                         <span className=" text-[#666666] text-lg font-bold mt-6">Join Our Newsletter & <br /> Get 30% Off !</span>
                         <div className="form-control">
                             <label className="label">
@@ -55,10 +55,10 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className="footer footer-center p-5 border-t-[3px] footer2" >
+                <div className="footer footer-center p-5 footer2" >
                     <aside>
                         <p className=''>Copyright © 2023 -
-                            Mohammad Shimul || Assignment-9 PH
+                            Mohammad Shimul || Assignment-10 PH
                         </p>
                     </aside>
                 </div>

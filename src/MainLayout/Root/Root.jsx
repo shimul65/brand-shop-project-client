@@ -12,7 +12,7 @@ const Root = () => {
             <div className="container mx-auto">
                 <Navbar></Navbar>
             </div>
-            <div className="container mx-auto">
+            <div className="">
                 {
                     navigation.state === 'loading' ? <Spinner></Spinner> : <Outlet></Outlet>
                 }

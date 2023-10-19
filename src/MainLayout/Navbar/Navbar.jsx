@@ -14,12 +14,13 @@ const Navbar = () => {
             <li className=" py-2"><NavLink to='/blogs'>Blogs</NavLink></li>
         </>
         } */}
-        <li className=" py-2"><NavLink to='/about'>About Us</NavLink></li>
+        <li className=" py-2"><NavLink to='/article'>Article</NavLink></li>
+        <li className=" py-2"><NavLink to='/seller'>Seller</NavLink></li>
 
     </>
 
     return (
-        <div className="navbar font-semibold">
+        <div className="navbar font-semibold py-3">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -29,7 +30,7 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <Link to='/' className=""><img src={logo} alt="" /></Link>
+                <Link to='/' ><img className='w-[150px]' src={logo} alt="" /></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="flex justify-center items-center gap-6 px-1">
