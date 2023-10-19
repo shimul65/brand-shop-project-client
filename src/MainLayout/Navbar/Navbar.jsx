@@ -28,13 +28,11 @@ const Navbar = () => {
 
     const navLinks = <>
         <li className=" py-2"><NavLink to='/'>Home</NavLink></li>
-        <li className=" py-2"><NavLink to='/addProduct'>Add Product</NavLink></li>
-        <li className=" py-2"><NavLink to='/myCart'>My Cart</NavLink></li>
-        {/* {user && <>
-            <li className=" py-2"><NavLink to='/gallery'>Gallery</NavLink></li>
-            <li className=" py-2"><NavLink to='/blogs'>Blogs</NavLink></li>
+        {user && <>
+            <li className=" py-2"><NavLink to='/addProduct'>Add Product</NavLink></li>
+            <li className=" py-2"><NavLink to='/myCart'>My Cart</NavLink></li>
         </>
-        } */}
+        }
         <li className=" py-2"><NavLink to='/article'>Article</NavLink></li>
         <li className=" py-2"><NavLink to='/seller'>Seller</NavLink></li>
 
@@ -85,9 +83,9 @@ const Navbar = () => {
                             </ul>
                         </div>
                         :
-                    <Link to='/login'>
-                        <button className="ctrl-standard  fx-sliderIn btn rounded-full bg-black hover:text-black text-xs md:text-base font-medium md:font-extrabold text-[#FFF] px-7 hover:border-black">LOG IN</button>
-                    </Link>
+                        <Link to='/login'>
+                            <button className="ctrl-standard  fx-sliderIn btn rounded-full bg-black hover:text-black text-xs md:text-base font-medium md:font-extrabold text-[#FFF] px-7 hover:border-black">LOG IN</button>
+                        </Link>
                 }
             </div>
         </div>
