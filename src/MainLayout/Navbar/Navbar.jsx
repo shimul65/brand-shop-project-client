@@ -1,5 +1,6 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import logo from '../..//assets/logo.svg'
+import profile from '../../assets/profile.png'
 import './Navbar.css'
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
