@@ -1,13 +1,15 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
+const all = import.meta.env;
+
 const firebaseConfig = {
-    apiKey: "AIzaSyC0nAUm7AgxaPk6oxaE9BRX_QtM8sfV9ks",
-    authDomain: "beautico-brand-shop-shimul.firebaseapp.com",
-    projectId: "beautico-brand-shop-shimul",
-    storageBucket: "beautico-brand-shop-shimul.appspot.com",
-    messagingSenderId: "1068761476282",
-    appId: "1:1068761476282:web:2b9128b8ea35c191e8a683"
+    apiKey: all.VITE_APIKEY,
+    authDomain: all.VITE_AUTHDOMAIN,
+    projectId: all.VITE_PROJECTID,
+    storageBucket: all.VITE_STORAGEBUCKET,
+    messagingSenderId: all.VITE_MESSAGINGSENDERID,
+    appId: all.VITE_APPID,
 };
 
 // Initialize Firebase
