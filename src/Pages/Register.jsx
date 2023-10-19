@@ -1,7 +1,7 @@
 // import { useContext, useState } from "react";
 // import { AuthContext } from "../../Providers/AuthProvider";
 import toast from "react-hot-toast";
-import { Link, useNavigate,   } from "react-router-dom";
+import { Link, useNavigate, } from "react-router-dom";
 // import SocialLogin from "../../Components/SocialLogin/SocialLogin";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useContext, useState } from "react";
@@ -23,10 +23,28 @@ const Register = () => {
         const email = form.get('email');
         const password = form.get('password');
         const name = form.get('name');
-        const photoURL = form.get('photoURL');      
+        const photoURL = form.get('photoURL');
+        const isAccepted = form.get('terms') === 'on';
+
+        // password validation check
+        if (password.length < 6) {
+            toast.error('Password should be at least 6 characters or longer');
+            return
+        }
+        else if (!/[A-Z]/.test(password)) {
+            toast.error('Your Password should contain an uppercase letter')
+            return;
+        }
+        else if (!/[!@#%^&*()_+\-=\[\]{}|;\\':",.<>?~`]/.test(password)) {
+            toast.error('Your Password should contain a special character');
+            return;
+        }
+        else if (!isAccepted) {
+            toast.error('Please accept our terms & conditions');
+            return;
+        }
 
 
-       
 
         //create new user
         createUser(email, password)
@@ -43,7 +61,7 @@ const Register = () => {
                         console.log(error);
                     });
 
-                
+
             })
             .catch(error => {
                 const errorCode = error.code;
@@ -96,7 +114,7 @@ const Register = () => {
                         <label htmlFor="terms">Accept Our Terms and Conditions</label>
                     </div>
                     <div className="form-control mt-6">
-                    <button className="ctrl-standard  fx-sliderIn btn rounded-full w-1/2 mx-auto bg-black hover:text-black text-xs md:text-base font-medium md:font-extrabold text-[#FFF] px-7 hover:border-black">Register</button>
+                        <button className="ctrl-standard  fx-sliderIn btn rounded-full w-1/2 mx-auto bg-black hover:text-black text-xs md:text-base font-medium md:font-extrabold text-[#FFF] px-7 hover:border-black">Register</button>
                     </div>
                 </form>
                 <p className="mt-8 text-center">Already Have An Account ? <span className="text-blue-600 font-medium underline"><Link to='/login'>Login</Link></span></p>
