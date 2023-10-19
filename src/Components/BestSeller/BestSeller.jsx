@@ -12,7 +12,7 @@ const BestSeller = () => {
                             They’re Kinda <br />Our Best Thing!
                         </h2>
                         <p className='text-lg text-center'>
-                            Whatever Your Summer Looks Like, Bring <br /> Your Own Heat  With Up To 25% Off Lumin Brand.Pellentesque Ipsum Dui, Laoreet <br /> Vitae Ex In, Pellentesque Aliquam Leo.
+                        Elevate Your Summer Style <br /> with Up to 30% Off All Beachwear. <br /> Nulla laoreet, justo id
                         </p>
                         <button className="ctrl-standard flex items-center mx-auto  w-1/2 md:w-auto  fx-sliderIn btn rounded-full bg-black hover:text-black text-xs md:text-base font-medium md:font-extrabold text-[#FFF] px-7 hover:border-black">* Shop All Brows *</button>
                     </div>
@@ -26,7 +26,8 @@ const BestSeller = () => {
                             Try On Your <br /> Perfect Best Makeup!
                         </h2>
                         <p className='text-lg text-center '>
-                        Whatever Your Summer Looks Like, Bring <br /> Your Own Heat  With Up To 25% Off Lumin Brand.Pellentesque Ipsum Dui, Laoreet <br /> Vitae Ex In, Pellentesque Aliquam Leo.
+                        Sizzle in Style: Up to 20% Off <br /> Swimwear for an Unforgettable Summer <br /> Adventure. Nulla sed massa.
+
                         </p>
                         <button className="ctrl-standard flex items-center mx-auto  w-1/2 md:w-auto  fx-sliderIn btn rounded-full bg-black hover:text-black text-xs md:text-base font-medium md:font-extrabold text-[#FFF] px-7 hover:border-black">* Try It Now *</button>
                     </div>

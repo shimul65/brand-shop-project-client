@@ -19,10 +19,10 @@ const Article = () => {
                                 Makeup</p>
                         </div>
                         <h2 className='text-3xl font-semibold'>
-                            Aenean Eget Augue Idendtr Odio Efficitur.
+                        The Ultimate Guide to Natural Beauty Products.
                         </h2>
                         <p>
-                            Software development is the process offer creatain onet computer software......
+                        Explore the world of organic, clean beauty solutions......
                         </p>
                         <button className="ctrl-standard flex items-center w-32 fx-sliderIn btn rounded-full bg-black hover:text-black text-sm font-medium md:font-extrabold text-[#FFF] hover:border-black">Read More</button>
                     </div>
@@ -39,10 +39,10 @@ const Article = () => {
                                 Makeup</p>
                         </div>
                         <h2 className='text-3xl font-semibold'>
-                            Aenean Eget Augue Idendtr Odio Efficitur.
+                        10 Must-Try Makeup Trends for 2023.
                         </h2>
                         <p>
-                            Software development is the process offer creatain onet computer software......
+                        Stay on-trend with these hot cosmetic looks......
                         </p>
                         <button className="ctrl-standard flex items-center w-32 fx-sliderIn btn rounded-full bg-black hover:text-black text-sm font-medium md:font-extrabold text-[#FFF] hover:border-black">Read More</button>
                     </div>
@@ -58,10 +58,10 @@ const Article = () => {
                                 Makeup</p>
                         </div>
                         <h2 className='text-3xl font-semibold'>
-                            Aenean Eget Augue Idendtr Odio Efficitur.
+                        The Science of Skincare: Unraveling the Myths.
                         </h2>
                         <p>
-                            Software development is the process offer creatain onet computer software......
+                        Discover the truth behind skincare misconceptions......
                         </p>
                         <button className="ctrl-standard flex items-center w-32 fx-sliderIn btn rounded-full bg-black hover:text-black text-sm font-medium md:font-extrabold text-[#FFF] hover:border-black">Read More</button>
                     </div>
@@ -77,10 +77,10 @@ const Article = () => {
                                 Makeup</p>
                         </div>
                         <h2 className='text-3xl font-semibold'>
-                            Aenean Eget Augue Idendtr Odio Efficitur.
+                        Eco-Friendly Beauty: Sustainable Choices for You.
                         </h2>
                         <p>
-                            Software development is the process offer creatain onet computer software......
+                        Learn how to make environmentally-conscious beauty selections......
                         </p>
                         <button className="ctrl-standard flex items-center w-32 fx-sliderIn btn rounded-full bg-black hover:text-black text-sm font-medium md:font-extrabold text-[#FFF] hover:border-black">Read More</button>
                     </div>

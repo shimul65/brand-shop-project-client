@@ -28,10 +28,15 @@ const Banner = () => {
                     <div className="relative  my-10">
                         <div className='flex items-center'>
                             <div className="flex-1  space-y-10 px-5"  >
-                                <h2 className="text-2xl text-center md:text-left lg:text-6xl font-bold">
-                                    Skin Wellness<br />
-                                    Takes Gentle Time
-                                </h2>
+                                <div className='relative'>
+                                    <h2 className="text-2xl text-center md:text-left lg:text-6xl font-bold">
+                                        Skin Wellness <br />
+                                        Takes Gentle Time
+                                    </h2>
+                                    <div className='absolute right-32 -top-1 rotate-45'>
+                                        <p className='text-[#ff635c] text-xl px-3 py-2 bg-[#d6d5d5] rounded-3xl font-bold'>20% OFF</p>
+                                    </div>
+                                </div>
                                 <p className='text-lg text-center md:text-left'>
                                     Whatever Your Summer Looks Like , Bring Your Own Heat With <br /> Up to 25% Off Lumin Brand
                                 </p>
@@ -48,10 +53,14 @@ const Banner = () => {
                     <div className="relative  my-10">
                         <div className='flex items-center'>
                             <div className="flex-1  space-y-10 px-5"  >
-                                <h2 className="text-2xl text-center md:text-left lg:text-6xl font-bold">
-                                    Skin Wellness<br />
-                                    Takes Gentle Time
-                                </h2>
+                                <div className='relative'>
+                                    <h2 className="text-2xl text-center md:text-left lg:text-6xl font-bold">
+                                    Caring for Skin <br /> A Gentle Wellness Journey
+                                    </h2>
+                                    <div className='absolute right-24 -top-1 rotate-45'>
+                                        <p className='text-[#ff635c] text-xl px-3 py-2 bg-[#d6d5d5] rounded-3xl font-bold'>20% OFF</p>
+                                    </div>
+                                </div>
                                 <p className='text-lg text-center md:text-left'>
                                     Whatever Your Summer Looks Like , Bring Your Own Heat With <br /> Up to 25% Off Lumin Brand
                                 </p>
@@ -68,10 +77,14 @@ const Banner = () => {
                     <div className="relative  my-10">
                         <div className='flex items-center'>
                             <div className="flex-1  space-y-10 px-5"  >
-                                <h2 className="text-2xl text-center md:text-left lg:text-6xl font-bold">
-                                    Skin Wellness<br />
-                                    Takes Gentle Time
-                                </h2>
+                                <div className='relative'>
+                                    <h2 className="text-2xl text-center md:text-left lg:text-6xl font-bold">
+                                   Your Skin <br /> Time for Wellness
+                                    </h2>
+                                    <div className='absolute right-32 -top-1 rotate-45'>
+                                        <p className='text-[#ff635c] text-xl px-3 py-2 bg-[#d6d5d5] rounded-3xl font-bold'>20% OFF</p>
+                                    </div>
+                                </div>
                                 <p className='text-lg text-center md:text-left'>
                                     Whatever Your Summer Looks Like , Bring Your Own Heat With <br /> Up to 25% Off Lumin Brand
                                 </p>
@@ -88,10 +101,14 @@ const Banner = () => {
                     <div className="relative  my-10">
                         <div className='flex items-center'>
                             <div className="flex-1  space-y-10 px-5"  >
-                                <h2 className="text-2xl text-center md:text-left lg:text-6xl font-bold">
-                                    Skin Wellness<br />
-                                    Takes Gentle Time
-                                </h2>
+                                <div className='relative'>
+                                    <h2 className="text-2xl text-center md:text-left lg:text-6xl font-bold">
+                                    Wellness Gentle <br /> Skin Care Practices
+                                    </h2>
+                                    <div className='absolute right-20 -top-1 rotate-45'>
+                                        <p className='text-[#ff635c] text-xl px-3 py-2 bg-[#d6d5d5] rounded-3xl font-bold'>20% OFF</p>
+                                    </div>
+                                </div>
                                 <p className='text-lg text-center md:text-left'>
                                     Whatever Your Summer Looks Like , Bring Your Own Heat With <br /> Up to 25% Off Lumin Brand
                                 </p>
