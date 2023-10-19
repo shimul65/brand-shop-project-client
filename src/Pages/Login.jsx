@@ -3,6 +3,7 @@ import toast from "react-hot-toast";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
+import SocialLogin from "../Components/SocialLogin/SocialLogin";
 
 const Login = () => {
 
@@ -76,8 +77,8 @@ const Login = () => {
             </form>
             <p className="mt-8 text-center">Don’t Have An Account ? <span className="text-red-600 underline font-medium"><Link to='/register'>Register</Link></span></p>
             <div className="divider">continue with</div>
-            <div className="md:w-1/2 w-full">
-                {/* <SocialLogin></SocialLogin> */}
+            <div className="w-full">
+                <SocialLogin></SocialLogin>
             </div>
         </div>
     );

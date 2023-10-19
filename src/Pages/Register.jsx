@@ -6,6 +6,7 @@ import { Link, useNavigate, } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
+import SocialLogin from "../Components/SocialLogin/SocialLogin";
 
 const Register = () => {
 
@@ -119,8 +120,8 @@ const Register = () => {
                 </form>
                 <p className="mt-8 text-center">Already Have An Account ? <span className="text-blue-600 font-medium underline"><Link to='/login'>Login</Link></span></p>
                 <div className="divider">continue with</div>
-                <div className="md:w-1/2 w-full">
-                    {/* <SocialLogin></SocialLogin> */}
+                <div className="w-full">
+                    <SocialLogin></SocialLogin>
                 </div>
             </div>
         </div>
