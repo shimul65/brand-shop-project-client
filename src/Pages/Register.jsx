@@ -10,7 +10,7 @@ import { AuthContext } from "../Providers/AuthProvider";
 const Register = () => {
 
 
-    const { createUser } = useContext(AuthContext);
+    const { createUser, handleUpdateProfile } = useContext(AuthContext);
 
     const navigate = useNavigate();
 
@@ -22,6 +22,8 @@ const Register = () => {
         const form = new FormData(e.currentTarget);
         const email = form.get('email');
         const password = form.get('password');
+        const name = form.get('name');
+        const photoURL = form.get('photoURL');      
 
 
        
@@ -31,8 +33,15 @@ const Register = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
-                navigate('/');
-                toast.success('User Sign Up Successfully')
+
+                // update profile
+                handleUpdateProfile(name, photoURL)
+                    .then(() => {
+                        navigate('/');
+                        toast.success('User Sign Up Successfully')
+                    }).catch((error) => {
+                        console.log(error);
+                    });
 
                 
             })

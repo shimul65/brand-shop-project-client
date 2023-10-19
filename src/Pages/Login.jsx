@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import toast from "react-hot-toast";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 
 const Login = () => {
@@ -9,6 +9,8 @@ const Login = () => {
     const { signIn } = useContext(AuthContext);
 
     const navigate = useNavigate();
+
+    const location = useLocation();
 
     //show password
     const [showPass, setShowPass] = useState(false);
@@ -18,6 +20,7 @@ const Login = () => {
         const form = new FormData(e.currentTarget);
         const email = form.get('email');
         const password = form.get('password');
+        
 
         //create new user
         signIn(email, password)
