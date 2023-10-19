@@ -1,21 +1,54 @@
 // import { useContext, useState } from "react";
 // import { AuthContext } from "../../Providers/AuthProvider";
-// import toast from "react-hot-toast";
-import { Link,  } from "react-router-dom";
+import toast from "react-hot-toast";
+import { Link, useNavigate,   } from "react-router-dom";
 // import SocialLogin from "../../Components/SocialLogin/SocialLogin";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../Providers/AuthProvider";
 
 const Register = () => {
 
+
+    const { createUser } = useContext(AuthContext);
+
+    const navigate = useNavigate();
+
     //show password
     const [showPass, setShowPass] = useState(false);
+
+    const handleRegister = (e) => {
+        e.preventDefault();
+        const form = new FormData(e.currentTarget);
+        const email = form.get('email');
+        const password = form.get('password');
+
+
+       
+
+        //create new user
+        createUser(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                navigate('/');
+                toast.success('User Sign Up Successfully')
+
+                
+            })
+            .catch(error => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                toast.error(errorCode, errorMessage);
+            })
+
+    }
 
 
     return (
         <div className="container mx-auto" >
             <div className="card-body mx-auto md:w-3/4 lg:w-1/2 border py-8 px-10 md:py-16 my-20 rounded-2xl shadow-2xl md:px-24">
-                <form >
+                <form onSubmit={handleRegister} >
                     <h2 className="text-3xl font-semibold text-center">Register your account</h2>
                     <hr className="my-12" />
                     <div className="form-control mt-6">

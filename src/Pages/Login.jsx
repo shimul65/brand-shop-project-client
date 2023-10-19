@@ -1,22 +1,48 @@
-// import { useContext, useState } from "react";
-// import { Link, useLocation, useNavigate } from "react-router-dom";
-// import { AuthContext } from "../../Providers/AuthProvider";
-// import toast from "react-hot-toast";
-import { useState } from "react";
-// import SocialLogin from "../../Components/SocialLogin/SocialLogin";
+import { useContext, useState } from "react";
+import toast from "react-hot-toast";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../Providers/AuthProvider";
 
 const Login = () => {
 
+    const { signIn } = useContext(AuthContext);
+
+    const navigate = useNavigate();
 
     //show password
     const [showPass, setShowPass] = useState(false);
 
+    const handleLogin = (e) => {
+        e.preventDefault();
+        const form = new FormData(e.currentTarget);
+        const email = form.get('email');
+        const password = form.get('password');
+
+        //create new user
+        signIn(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+
+                // navigate after log in
+                navigate(location?.state ? location.state : '/');
+
+                toast.success('User Log In Successfully');
+            })
+            .catch(error => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                toast.error(`${errorCode, errorMessage}
+                Please input correct email and password`);
+            })
+
+    }
+
 
     return (
         <div className="card-body mx-auto my-20 rounded-2xl shadow-2xl md:w-3/4 lg:w-1/2 border py-8 px-10 md:py-16 md:px-24">
-            <form >
+            <form onSubmit={handleLogin}>
                 <h2 className="text-3xl font-semibold text-center">Login your account</h2>
                 <hr className="my-12" />
                 <div className="form-control">
