@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "brand_name": "Alisa",
+        "image": "https://i.ibb.co/KjZyDc0/brand-img4.png"
+    },
+    {
+        "id": 2,
+        "brand_name": "Mock Up",
+        "image": "https://i.ibb.co/6yTH6fN/brand-img2.png"
+    },
+    {
+        "id": 3,
+        "brand_name": "Smile",
+        "image": "https://i.ibb.co/zxBMSGV/brand-img1.png"
+    },
+    {
+        "id": 4,
+        "brand_name": "Antagony",
+        "image": "https://i.ibb.co/jy7ZpQg/brand-img9.png"
+    },
+    {
+        "id": 5,
+        "brand_name": "Iconic",
+        "image": "https://i.ibb.co/0B2P7Nz/brand-img10.png"
+    },
+    {
+        "id": 6,
+        "brand_name": "Natural",
+        "image": "https://i.ibb.co/Jptjkmp/brand-img8.png"
+    },
+    {
+        "id": 7,
+        "brand_name": "New Wave",
+        "image": "https://i.ibb.co/1M5jSMT/brand-img7.png"
+    },
+    {
+        "id": 8,
+        "brand_name": "refresh",
+        "image": "https://i.ibb.co/gMvzDz6/brand-img5.png"
+    }
+]
