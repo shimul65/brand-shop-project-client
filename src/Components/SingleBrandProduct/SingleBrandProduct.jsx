@@ -9,8 +9,6 @@ const SingleBrandProduct = ({ product }) => {
 
     const { _id, name, brand_name, product_type, ratting, price, photo } = product;
 
-   
-
     return (
         
         <div className="flex flex-col mx-3 lg:mx-0 shadow-xl border rounded-xl">

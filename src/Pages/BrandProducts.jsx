@@ -16,7 +16,7 @@ const BrandProducts = () => {
     console.log(brandName);
     console.log(brandProducts);
 
-    const products = brandProducts.filter(product => product.brand_name === brandName);
+    const products = brandProducts?.filter(product => product.brand_name === brandName);
     console.log(products);
 
     const navigateToPreviousPage = () => {

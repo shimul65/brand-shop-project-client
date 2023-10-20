@@ -8,22 +8,6 @@ const Brand = ({ singleBrand }) => {
 
     const { id, brand_name, image } = singleBrand;
 
-    // const [brandProducts, setBrandProducts] = useState([]);
-
-    // useEffect(() => {
-    //     fetch('http://localhost:5555/products')
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             console.log(data);
-    //             setBrandProducts(data);
-    //         })
-    // }, [])
-
-
-
-
-
-
     return (
         <Link to={`/brandProducts/${brand_name}`}>
             <div className='border-black border p-1 rounded-t-full hover:rounded-t-none duration-300 ease-in-out'>

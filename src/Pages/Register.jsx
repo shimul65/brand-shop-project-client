@@ -1,8 +1,5 @@
-// import { useContext, useState } from "react";
-// import { AuthContext } from "../../Providers/AuthProvider";
 import toast from "react-hot-toast";
 import { Link, useNavigate, } from "react-router-dom";
-// import SocialLogin from "../../Components/SocialLogin/SocialLogin";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";

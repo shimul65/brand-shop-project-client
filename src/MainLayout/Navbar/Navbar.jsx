@@ -6,6 +6,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import toast from "react-hot-toast";
 import auth from "../../Firebase/firebase.config";
+import DarkMode from "../../Components/DarkMode/DarkMode";
 
 
 const Navbar = () => {
@@ -59,6 +60,9 @@ const Navbar = () => {
             </div>
 
             <div className="navbar-end">
+                <div className="mr-5">
+                    <DarkMode></DarkMode>
+                </div>
                 {
                     user ?
                         <div className="dropdown dropdown-end ">

@@ -31,22 +31,22 @@ const Routes = createBrowserRouter([
             {
                 path: "/brandProducts/:brandName",
                 element: <BrandProducts></BrandProducts>,
-                loader: () => fetch('http://localhost:5555/products')
+                loader: () => fetch('https://brand-shop-assignment-server-side-k7leokvhz-shimuls-projects.vercel.app/products')
             },
             {
                 path: "/productDetails/:id",
                 element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5555/products/${params?.id}`)
+                loader: ({ params }) => fetch(`https://brand-shop-assignment-server-side-k7leokvhz-shimuls-projects.vercel.app/products/${params?.id}`)
             },
             {
                 path: "/updateProduct/:id",
                 element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5555/products/${params?.id}`)
+                loader: ({ params }) => fetch(`https://brand-shop-assignment-server-side-k7leokvhz-shimuls-projects.vercel.app/products/${params?.id}`)
             },
             {
                 path: "/myCart",
                 element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
-                loader: () => fetch('http://localhost:5555/cartProducts')
+                loader: () => fetch('https://brand-shop-assignment-server-side-k7leokvhz-shimuls-projects.vercel.app/cartProducts')
             },
             {
                 path: "/article",

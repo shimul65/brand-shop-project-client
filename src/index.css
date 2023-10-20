@@ -3,7 +3,23 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --body_background: #fcf7ee;
+  --body_color: black;
+}
+
+[data-theme="dark"] {
+  --body_background: black;
+  --body_color: #fcf7ee;
+}
+
 body {
   font-family: 'Jost', sans-serif;
-  background-color: #fcf7ee;
+  /* background-color: #fcf7ee; */
+  background-color: var(--body_background);
+  color: var(--body_color);
+}
+
+* {
+  transition: all 0.3s ease-in-out;
 }

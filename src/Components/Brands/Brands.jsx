@@ -4,7 +4,6 @@ import Brand from "./Brand";
 
 const Brands = () => {
 
-
     const [brands, setBrands] = useState([]);
 
     axios.get('brandData.json')

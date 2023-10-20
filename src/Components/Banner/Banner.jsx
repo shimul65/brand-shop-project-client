@@ -123,5 +123,3 @@ const Banner = () => {
 
 export default Banner;
 
-// style={{ backgroundImage: `url(${bannerbg})`, backgroundSize: '100% 100%', backgroundPosition: 'bottom' }}
-

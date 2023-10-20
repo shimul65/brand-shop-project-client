@@ -13,7 +13,7 @@ const MyCart = () => {
     const { user } = useContext(AuthContext);
     const email = user.email;
 
-    const products = cartProducts.filter(product => product.email === email);
+    const products = cartProducts?.filter(product => product.email === email);
 
     // delete cart item
     const handleDelete = _id => {
@@ -28,7 +28,7 @@ const MyCart = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5555/cartProducts/${_id}`, {
+                fetch(`https://brand-shop-assignment-server-side-k7leokvhz-shimuls-projects.vercel.app/cartProducts/${_id}`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json'
@@ -43,7 +43,7 @@ const MyCart = () => {
                                 'Your Coffee has been deleted.',
                                 'success'
                             )
-                            const remaining = products.filter(product => product._id!== _id);
+                            const remaining = products?.filter(product => product._id!== _id);
                             setCartProducts(remaining);
                         }
                     })
