@@ -1,17 +1,55 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import Swal from "sweetalert2";
 
 
 const MyCart = () => {
-    const cartProducts = useLoaderData();
+    const loadedCartProducts = useLoaderData();
+
+    const [cartProducts, setCartProducts] = useState(loadedCartProducts);
 
     const { user } = useContext(AuthContext);
     const email = user.email;
 
     const products = cartProducts.filter(product => product.email === email);
-    console.log(products);
+
+    // delete cart item
+    const handleDelete = _id => {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                fetch(`http://localhost:5555/cartProducts/${_id}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                        if (data.deletedCount > 0) {
+                            Swal.fire(
+                                'Deleted!',
+                                'Your Coffee has been deleted.',
+                                'success'
+                            )
+                            const remaining = products.filter(product => product._id!== _id);
+                            setCartProducts(remaining);
+                        }
+                    })
+            }
+        })
+    }
 
     return (
         <div className="container mx-auto">
@@ -51,7 +89,7 @@ const MyCart = () => {
                                     </td>
                                     <td className="md:text-xl text-base font-semibold">$ {product?.price}</td>
                                     <th>
-                                        <button className="btn text-xl text-red-600"><RiDeleteBin6Line></RiDeleteBin6Line></button>
+                                        <button onClick={() => handleDelete(product?._id)} className="btn text-xl text-red-600"><RiDeleteBin6Line></RiDeleteBin6Line></button>
                                     </th>
 
                                 </tr>)
