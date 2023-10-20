@@ -1,9 +1,18 @@
-import Swal from 'sweetalert2'
+import { NavLink, useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
-const AddProduct = () => {
+const UpdateProduct = () => {
 
-    const handleAddProduct = e => {
+    const product = useLoaderData();
+
+    const { _id, name, brand_name, product_type, ratting, price, photo, description } = product || {};
+
+    const navigateToPreviousPage = () => {
+        window.history.back();
+    };
+
+    const handleUpdateProduct = e => {
         e.preventDefault();
         const form = e.target;
         const name = form.name.value;
@@ -14,36 +23,38 @@ const AddProduct = () => {
         const description = form.description.value;
         const photo = form.photo.value;
 
-        const newProduct = { name, brand_name, product_type, ratting, price, description, photo }
-        console.log(newProduct);
+        const updatedProduct = { name, brand_name, product_type, ratting, price, description, photo }
+        console.log(updatedProduct);
 
-        // data send to server side
-        fetch('http://localhost:5555/products', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(newProduct)
+        // send updated data to backend
+        fetch(`http://localhost:5555/products/${_id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(updatedProduct)
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
-                if (data.insertedId) {
+                console.log(data)
+                if (data.modifiedCount > 0) {
                     Swal.fire({
                         title: 'Success!',
-                        text: 'Product added successfully',
+                        text: 'Product updated successfully',
                         icon: 'success',
                         confirmButtonText: 'Cool'
                     })
                 }
             })
-    }
 
+    }
 
 
     return (
         <div className="container mx-auto my-10 md:my-20">
-            <h2 className="mb-10 text-3xl md:text-5xl font-extrabold text-center">Add Product</h2>
+            <h2 className="mb-10 text-3xl md:text-5xl font-extrabold text-center">Update Product</h2>
             <div className="mx-3">
-                <form onSubmit={handleAddProduct}>
+                <form onSubmit={handleUpdateProduct}>
                     {/* form row */}
                     <div className="md:flex gap-6">
                         <div className="form-control md:w-1/2">
@@ -51,7 +62,7 @@ const AddProduct = () => {
                                 <span className="font-medium ">Product Name</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="name" placeholder="Product name" className="input input-bordered w-full" />
+                                <input type="text" name="name" defaultValue={name} placeholder="Product name" className="input input-bordered w-full" />
                             </label>
                         </div>
                         <div className="form-control md:w-1/2">
@@ -59,7 +70,7 @@ const AddProduct = () => {
                                 <span className="font-medium">Brand Name </span>
                             </label>
                             <label>
-                                <select className="input input-bordered w-full" name="brand" >
+                                <select className="input input-bordered w-full" name="brand" defaultValue={brand_name} >
                                     <option disabled selected>Select Brand Name</option>
                                     <option>Alisa</option>
                                     <option>Mock Up</option>
@@ -80,7 +91,7 @@ const AddProduct = () => {
                                 <span className="font-medium">Product Type</span>
                             </label>
                             <label className="input-group">
-                                <select className="input input-bordered w-full" name="type" >
+                                <select className="input input-bordered w-full" name="type" defaultValue={product_type} >
                                     <option disabled selected>Select Product Type</option>
                                     <option>Lipstick Shades</option>
                                     <option>Skin Moisturizers</option>
@@ -100,7 +111,7 @@ const AddProduct = () => {
                                 <span className="font-medium">Ratting</span>
                             </label>
                             <label className="input-group">
-                                <input type="number" min="1" max="10" name="ratting" placeholder="Give ratting out of 10" className="input input-bordered w-full" />
+                                <input type="number" min="1" max="10" name="ratting" defaultValue={ratting} placeholder="Give ratting out of 10" className="input input-bordered w-full" />
                             </label>
                         </div>
                     </div>
@@ -111,7 +122,7 @@ const AddProduct = () => {
                                 <span className="font-medium">Price</span>
                             </label>
                             <label className="input-group">
-                                <input type="number" min='1' name="price" placeholder="Price" className="input input-bordered w-full" />
+                                <input type="number" defaultValue={price} min='1' name="price" placeholder="Price" className="input input-bordered w-full" />
                             </label>
                         </div>
                         <div className="form-control md:w-1/2">
@@ -119,7 +130,7 @@ const AddProduct = () => {
                                 <span className="font-medium">Short Description</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="description" placeholder="Short description" className="input input-bordered w-full" />
+                                <input type="text" defaultValue={description} name="description" placeholder="Short description" className="input input-bordered w-full" />
                             </label>
                         </div>
                     </div>
@@ -130,15 +141,21 @@ const AddProduct = () => {
                                 <span className="font-medium">Photo URL</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered w-full" />
+                                <input type="text" defaultValue={photo} name="photo" placeholder="Photo URL" className="input input-bordered w-full" />
                             </label>
                         </div>
                     </div>
-                    <input type="submit" value='Add Product' className="btn btn-block my-5 shadow-lg" />
+                    <input type="submit" value='Update Product' className="btn btn-block my-5 shadow-lg" />
                 </form>
             </div>
+            <NavLink onClick={navigateToPreviousPage}>
+                <div className="card-actions justify-center mt-5">
+                    <button
+                        className="btn px-6 rounded-full bg-[#ff635c] hover:bg-[#fcb41e] hover:text-black text-xs md:text-lg font-medium md:font-medium text-[#FFF]   border-none">Go Back</button>
+                </div>
+            </NavLink>
         </div>
     );
 };
 
-export default AddProduct;
+export default UpdateProduct;

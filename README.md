@@ -1,7 +1,7 @@
 ##  Questions with answers
 
-#### Add at least 3 Project features.
-- Adding at least 3 Project features -->
+#### Add at least 5 Project features.
+- Adding at least 5 Project features -->
 
    1. Multi-Brand Shopping::
    Enable users to shop from multiple beauty and cosmetics brands within the same platform, providing a one-stop destination for all their beauty needs.
