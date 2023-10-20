@@ -33,9 +33,7 @@ const Banner = () => {
                                         Skin Wellness <br />
                                         Takes Gentle Time
                                     </h2>
-                                    <div className='absolute right-2 lg:right-32 -top-1 rotate-45'>
-                                        <p className='text-[#ff635c] text-xl px-3 py-2 bg-[#d6d5d5] rounded-3xl font-bold'>20% OFF</p>
-                                    </div>
+                                    
                                 </div>
                                 <p className='text-lg text-center md:text-left'>
                                     Whatever Your Summer Looks Like , Bring Your Own Heat With <br /> Up to 25% Off Lumin Brand
@@ -57,9 +55,7 @@ const Banner = () => {
                                     <h2 className="text-2xl text-center md:text-left lg:text-6xl font-bold">
                                     Caring for Skin <br /> A Gentle Wellness Journey
                                     </h2>
-                                    <div className='absolute right-0 lg:right-24 lg:-top-1 -top-5 rotate-45'>
-                                        <p className='text-[#ff635c] text-xl px-3 py-2 bg-[#d6d5d5] rounded-3xl font-bold'>20% OFF</p>
-                                    </div>
+                                    
                                 </div>
                                 <p className='text-lg text-center md:text-left'>
                                     Whatever Your Summer Looks Like , Bring Your Own Heat With <br /> Up to 25% Off Lumin Brand
@@ -81,9 +77,7 @@ const Banner = () => {
                                     <h2 className="text-2xl text-center md:text-left lg:text-6xl font-bold">
                                    Your Skin <br /> Time for Wellness
                                     </h2>
-                                    <div className='absolute right-5 lg:right-32 -top-1 rotate-45'>
-                                        <p className='text-[#ff635c] text-xl px-3 py-2 bg-[#d6d5d5] rounded-3xl font-bold'>20% OFF</p>
-                                    </div>
+                                    
                                 </div>
                                 <p className='text-lg text-center md:text-left'>
                                     Whatever Your Summer Looks Like , Bring Your Own Heat With <br /> Up to 25% Off Lumin Brand
@@ -105,9 +99,7 @@ const Banner = () => {
                                     <h2 className="text-2xl text-center md:text-left lg:text-6xl font-bold">
                                     Wellness Gentle <br /> Skin Care Practices
                                     </h2>
-                                    <div className='absolute right-1 lg:right-20 -top-1 rotate-45'>
-                                        <p className='text-[#ff635c] text-xl px-3 py-2 bg-[#d6d5d5] rounded-3xl font-bold'>20% OFF</p>
-                                    </div>
+                                   
                                 </div>
                                 <p className='text-lg text-center md:text-left'>
                                     Whatever Your Summer Looks Like , Bring Your Own Heat With <br /> Up to 25% Off Lumin Brand

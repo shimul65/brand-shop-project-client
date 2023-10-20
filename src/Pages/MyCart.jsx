@@ -82,7 +82,7 @@ const MyCart = () => {
                                             </div>
                                         </div>
                                     </td>
-                                    <td className="hidden md:block">
+                                    <td className="hidden md:table-cell">
                                         <span className="text-lg font-medium">{product?.brand_name}</span>
                                         <br />
                                         <span className="badge badge-ghost badge-sm">{product?.product_type}</span>

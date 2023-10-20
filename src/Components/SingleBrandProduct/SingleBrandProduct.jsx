@@ -9,8 +9,11 @@ const SingleBrandProduct = ({ product }) => {
 
     const { _id, name, brand_name, product_type, ratting, price, photo } = product;
 
+   
+
     return (
-        <div className="flex flex-col mx-3 lg:mx-0 shadow-xl border">
+        
+        <div className="flex flex-col mx-3 lg:mx-0 shadow-xl border rounded-xl">
             <div className="flex-1">
                 <figure><img className="h-[400px] w-full" src={photo} alt="product" /></figure>
             </div>
@@ -40,6 +43,7 @@ const SingleBrandProduct = ({ product }) => {
                             className="btn w-full px-6 rounded-full bg-[#ff635c] hover:bg-[#fcb41e] hover:text-black text-xs md:text-lg font-medium md:font-medium text-[#FFF]   border-none">Update</button></Link>
                 </div>
             </div>
+            
         </div>
     );
 };

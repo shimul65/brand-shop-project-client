@@ -30,7 +30,7 @@ const Routes = createBrowserRouter([
             },
             {
                 path: "/brandProducts/:brandName",
-                element: <PrivateRoute><BrandProducts></BrandProducts></PrivateRoute>,
+                element: <BrandProducts></BrandProducts>,
                 loader: () => fetch('http://localhost:5555/products')
             },
             {
