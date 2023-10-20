@@ -2,13 +2,26 @@ import { TbTruckDelivery } from 'react-icons/tb';
 import { GiReturnArrow } from 'react-icons/gi';
 import { RiSecurePaymentLine } from 'react-icons/ri';
 import { MdOutlineProductionQuantityLimits } from 'react-icons/md';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 
 const Service = () => {
+
+    useEffect(() => {
+        AOS.init();
+    }, []);
+
+
     return (
         <div className='md:bg-[#d6d5d5]'>
             <div className='grid container mx-auto grid-cols-1 md:grid-cols-4 gap-6 md:gap-0 py-5 px-3 md:py-10 md:justify-items-center'>
-                <div className='flex gap-3'>
-                    <div className='text-3xl mt-1'>
+                <div className='flex gap-3' >
+                    <div className='text-3xl mt-1'
+                        data-aos="fade-up"
+                        data-aos-easing="linear"
+                        data-aos-duration="1250" >
                         <TbTruckDelivery></TbTruckDelivery>
                     </div>
                     <div>
@@ -17,7 +30,10 @@ const Service = () => {
                     </div>
                 </div>
                 <div className='flex gap-3'>
-                    <div className='text-3xl mt-1'>
+                    <div className='text-3xl mt-1'
+                        data-aos="fade-up"
+                        data-aos-easing="linear"
+                        data-aos-duration="1250">
                         <GiReturnArrow></GiReturnArrow>
                     </div>
                     <div>
@@ -26,7 +42,10 @@ const Service = () => {
                     </div>
                 </div>
                 <div className='flex gap-3'>
-                    <div className='text-3xl mt-1'>
+                    <div className='text-3xl mt-1'
+                        data-aos="fade-up"
+                        data-aos-easing="linear"
+                        data-aos-duration="1250">
                         <RiSecurePaymentLine></RiSecurePaymentLine>
                     </div>
                     <div>
@@ -35,7 +54,10 @@ const Service = () => {
                     </div>
                 </div>
                 <div className='flex gap-3'>
-                    <div className='text-3xl mt-1'>
+                    <div className='text-3xl mt-1'
+                        data-aos="fade-up"
+                        data-aos-easing="linear"
+                        data-aos-duration="1250">
                         <MdOutlineProductionQuantityLimits></MdOutlineProductionQuantityLimits>
                     </div>
                     <div>

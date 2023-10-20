@@ -6,9 +6,16 @@ import banner_bg from '../../assets/banner-vector3.svg'
 import "./slick.css";
 import "./slick-theme.css";
 import Slider from "react-slick";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 
 const Banner = () => {
+
+    useEffect(() => {
+        AOS.init();
+    }, [])
 
     const settings = {
         dots: true,
@@ -29,11 +36,14 @@ const Banner = () => {
                         <div className='flex items-center'>
                             <div className="flex-1  space-y-10 px-5"  >
                                 <div className='relative'>
-                                    <h2 className="text-2xl text-center md:text-left lg:text-6xl font-bold">
+                                    <h2 className="text-2xl text-center md:text-left lg:text-6xl font-bold"
+                                        data-aos="zoom-out-left"
+                                        data-aos-easing="linear"
+                                        data-aos-duration="1250" >
                                         Skin Wellness <br />
                                         Takes Gentle Time
                                     </h2>
-                                    
+
                                 </div>
                                 <p className='text-lg text-center md:text-left'>
                                     Whatever Your Summer Looks Like , Bring Your Own Heat With <br /> Up to 25% Off Lumin Brand
@@ -52,10 +62,13 @@ const Banner = () => {
                         <div className='flex items-center'>
                             <div className="flex-1  space-y-10 px-5"  >
                                 <div className='relative'>
-                                    <h2 className="text-2xl text-center md:text-left lg:text-6xl font-bold">
-                                    Caring for Skin <br /> A Gentle Wellness Journey
+                                    <h2 className="text-2xl text-center md:text-left lg:text-6xl font-bold"
+                                        data-aos="zoom-out-left"
+                                        data-aos-easing="linear"
+                                        data-aos-duration="1250">
+                                        Caring for Skin <br /> A Gentle Wellness Journey
                                     </h2>
-                                    
+
                                 </div>
                                 <p className='text-lg text-center md:text-left'>
                                     Whatever Your Summer Looks Like , Bring Your Own Heat With <br /> Up to 25% Off Lumin Brand
@@ -75,9 +88,9 @@ const Banner = () => {
                             <div className="flex-1  space-y-10 px-5"  >
                                 <div className='relative'>
                                     <h2 className="text-2xl text-center md:text-left lg:text-6xl font-bold">
-                                   Your Skin <br /> Time for Wellness
+                                        Your Skin <br /> Time for Wellness
                                     </h2>
-                                    
+
                                 </div>
                                 <p className='text-lg text-center md:text-left'>
                                     Whatever Your Summer Looks Like , Bring Your Own Heat With <br /> Up to 25% Off Lumin Brand
@@ -97,9 +110,9 @@ const Banner = () => {
                             <div className="flex-1  space-y-10 px-5"  >
                                 <div className='relative'>
                                     <h2 className="text-2xl text-center md:text-left lg:text-6xl font-bold">
-                                    Wellness Gentle <br /> Skin Care Practices
+                                        Wellness Gentle <br /> Skin Care Practices
                                     </h2>
-                                   
+
                                 </div>
                                 <p className='text-lg text-center md:text-left'>
                                     Whatever Your Summer Looks Like , Bring Your Own Heat With <br /> Up to 25% Off Lumin Brand

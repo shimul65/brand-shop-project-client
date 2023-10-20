@@ -7,9 +7,13 @@ import banner3 from '../assets/banner-right-bg-img3.png'
 import "../Components/Banner/slick.css";
 import "../Components/Banner/slick-theme.css";
 import Slider from "react-slick";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 
 const BrandProducts = () => {
+
     const { brandName } = useParams();
     const brandProducts = useLoaderData();
 
@@ -33,6 +37,10 @@ const BrandProducts = () => {
         pauseOnHover: true,
     };
 
+    useEffect(() => {
+        AOS.init();
+    }, [])
+
     return (
         <div className="container mx-auto mb-16">
 
@@ -42,7 +50,9 @@ const BrandProducts = () => {
                     <div className=" my-10 ">
                         <div className='flex items-center py-20' style={{ backgroundImage: `url(${banner1})`, backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat' }} >
                             <div className="flex-1  space-y-10 pl-10"  >
-                                <div className=''>
+                                <div className='' data-aos="zoom-out-left"
+                                    data-aos-easing="linear"
+                                    data-aos-duration="1250">
                                     <h2 className="text-2xl text-center md:text-left lg:text-6xl font-bold">
                                         Unleash Your Style <br />Exclusive Fashion <br /> Finds
                                     </h2>
@@ -91,8 +101,14 @@ const BrandProducts = () => {
             </div>
 
             {/* Products */}
-            <h2 className=" mt-10 text-2xl md:text-4xl font-extrabold text-center">All products of the Brand</h2>
-            <h2 className="my-8 text-2xl text-[#ff635c] md:text-5xl font-extrabold text-center">{brandName}</h2>
+            <h2 className=" mt-10 text-2xl md:text-4xl font-extrabold text-center"
+                data-aos="zoom-out"
+                data-aos-easing="linear"
+                data-aos-duration="1250">All products of the Brand</h2>
+            <h2 className="my-8 text-2xl text-[#ff635c] md:text-5xl font-extrabold text-center"
+                data-aos="zoom-out"
+                data-aos-easing="linear"
+                data-aos-duration="1250">{brandName}</h2>
             <div>
                 {
                     products.length === 0 ? <>
