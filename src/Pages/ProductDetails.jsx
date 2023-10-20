@@ -2,24 +2,58 @@ import { Link, NavLink, useLoaderData } from "react-router-dom";
 import { FcRating } from "react-icons/fc";
 import { BsCurrencyDollar } from "react-icons/bs";
 import { TbBrandBooking } from "react-icons/tb";
+import Swal from "sweetalert2";
+import { useContext } from "react";
+import { AuthContext } from "../Providers/AuthProvider";
 
 
 const ProductDetails = () => {
 
     const product = useLoaderData();
 
+    const {user} = useContext(AuthContext);
+    const email = user.email;
+
     const { _id, name, brand_name, product_type, ratting, price, photo, description } = product || {};
 
     const navigateToPreviousPage = () => {
         window.history.back();
-      };
+    };
+
+    const handleAddToCart = () => {
+
+        const cartProduct = { email, name, brand_name, product_type, price, photo }
+        console.log(cartProduct);
+
+        // send cart product to the backend
+        fetch('http://localhost:5555/cartProducts', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(cartProduct)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Product added to the cart successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                }
+            })
+
+    }
+
+
 
 
     return (
         <div className="container mx-auto my-20">
             <div className="flex flex-col lg:flex-row mx-3 lg:mx-0 shadow-xl border">
                 <div className="flex-1">
-                    <figure><img className="h-[500px] w-full" src={photo} alt="product" /></figure>
+                    <figure><img className="h-[500px] w-full" src={photo} alt="product" title={_id} /></figure>
                 </div>
 
                 <div className="card-body flex-1">
@@ -40,15 +74,15 @@ const ProductDetails = () => {
                         </div>
                     </div>
                     <div className="card-actions justify-start">
-                        <Link to={`/productDetails/${_id}`}>
-                            <button className="ctrl-standard flex items-center mx-auto md:mx-0 w-1/2 md:w-auto  fx-sliderIn btn rounded-full bg-black hover:text-black text-xs md:text-base font-medium md:font-extrabold text-[#FFF] px-7 hover:border-black">Add to Cart</button></Link>
+                        <Link onClick={handleAddToCart}>
+                            <button className="ctrl-standard flex items-center mx-auto md:mx-0  md:w-auto  fx-sliderIn btn rounded-full bg-black hover:text-black text-xs md:text-base font-medium md:font-extrabold text-[#FFF] px-7 hover:border-black">Add to Cart</button></Link>
                     </div>
                 </div>
             </div>
             <NavLink onClick={navigateToPreviousPage}>
                 <div className="card-actions justify-center mt-5">
-                <button
-                            className="btn px-6 rounded-full bg-[#ff635c] hover:bg-[#fcb41e] hover:text-black text-xs md:text-lg font-medium md:font-medium text-[#FFF]   border-none">Go Back</button>
+                    <button
+                        className="btn px-6 rounded-full bg-[#ff635c] hover:bg-[#fcb41e] hover:text-black text-xs md:text-lg font-medium md:font-medium text-[#FFF]   border-none">Go Back</button>
                 </div>
             </NavLink>
         </div>

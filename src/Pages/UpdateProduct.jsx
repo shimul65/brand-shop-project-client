@@ -46,27 +46,6 @@ const UpdateProduct = () => {
                     })
                 }
             })
-            
-        // // send updated data to backend
-        // fetch(`http://localhost:5555/products/${_id}`, {
-        //     method: 'PUT',
-        //     headers: {
-        //         'Content-Type': 'application/json'
-        //     },
-        //     body: JSON.stringify(updatedProduct)
-        // })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         console.log(data)
-        //         if (data.modifiedCount > 0) {
-        //             Swal.fire({
-        //                 title: 'Success!',
-        //                 text: 'Product updated successfully',
-        //                 icon: 'success',
-        //                 confirmButtonText: 'Cool'
-        //             })
-        //         }
-        //     })
 
     }
 
