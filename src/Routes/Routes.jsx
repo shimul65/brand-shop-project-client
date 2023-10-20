@@ -31,22 +31,22 @@ const Routes = createBrowserRouter([
             {
                 path: "/brandProducts/:brandName",
                 element: <BrandProducts></BrandProducts>,
-                loader: () => fetch('https://brand-shop-assignment-server-side-k7leokvhz-shimuls-projects.vercel.app/products')
+                loader: () => fetch('https://brand-shop-assignment-server-side-nine.vercel.app/products')
             },
             {
                 path: "/productDetails/:id",
                 element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
-                loader: ({ params }) => fetch(`https://brand-shop-assignment-server-side-k7leokvhz-shimuls-projects.vercel.app/products/${params?.id}`)
+                loader: ({ params }) => fetch(`https://brand-shop-assignment-server-side-nine.vercel.app/products/${params?.id}`)
             },
             {
                 path: "/updateProduct/:id",
                 element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
-                loader: ({ params }) => fetch(`https://brand-shop-assignment-server-side-k7leokvhz-shimuls-projects.vercel.app/products/${params?.id}`)
+                loader: ({ params }) => fetch(`https://brand-shop-assignment-server-side-nine.vercel.app/products/${params?.id}`)
             },
             {
                 path: "/myCart",
                 element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
-                loader: () => fetch('https://brand-shop-assignment-server-side-k7leokvhz-shimuls-projects.vercel.app/cartProducts')
+                loader: () => fetch('https://brand-shop-assignment-server-side-nine.vercel.app/cartProducts')
             },
             {
                 path: "/article",

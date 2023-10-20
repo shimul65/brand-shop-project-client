@@ -18,7 +18,7 @@ const AddProduct = () => {
         console.log(newProduct);
 
         // data send to server side
-        fetch('https://brand-shop-assignment-server-side-k7leokvhz-shimuls-projects.vercel.app/products', {
+        fetch('https://brand-shop-assignment-server-side-nine.vercel.app/products', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(newProduct)

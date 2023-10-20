@@ -26,7 +26,7 @@ const ProductDetails = () => {
         console.log(cartProduct);
 
         // send cart product to the backend
-        fetch('https://brand-shop-assignment-server-side-k7leokvhz-shimuls-projects.vercel.app/cartProducts', {
+        fetch('https://brand-shop-assignment-server-side-nine.vercel.app/cartProducts', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(cartProduct)

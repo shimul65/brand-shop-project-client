@@ -28,7 +28,7 @@ const MyCart = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`https://brand-shop-assignment-server-side-k7leokvhz-shimuls-projects.vercel.app/cartProducts/${_id}`, {
+                fetch(`https://brand-shop-assignment-server-side-nine.vercel.app/cartProducts/${_id}`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json'
