@@ -117,7 +117,7 @@ const BrandProducts = () => {
                     </>
                         :
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">{
-                            products?.map(product => <SingleBrandProduct key={product.id} product={product}></SingleBrandProduct>)
+                            products?.map(product => <SingleBrandProduct key={product._id} product={product}></SingleBrandProduct>)
                         }
                         </div>
                 }

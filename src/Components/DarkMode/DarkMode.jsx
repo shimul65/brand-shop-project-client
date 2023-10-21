@@ -34,7 +34,7 @@ const DarkMode = () => {
                 onChange={toggleTheme}
                 defaultChecked={selectedTheme === 'dark'}
             />
-            <label className='dark_mode_label border border-white' for='darkmode-toggle'>
+            <label className='dark_mode_label border border-white' htmlFor='darkmode-toggle'>
             </label>
         </div>
     );
