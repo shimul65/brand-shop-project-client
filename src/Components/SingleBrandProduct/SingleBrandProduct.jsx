@@ -10,7 +10,7 @@ const SingleBrandProduct = ({ product }) => {
     const { _id, name, brand_name, product_type, ratting, price, photo } = product;
 
     return (
-        
+
         <div className="flex flex-col mx-3 lg:mx-0 shadow-xl border rounded-xl">
             <div className="flex-1">
                 <figure><img className="h-[400px] w-full" src={photo} alt="product" /></figure>
@@ -34,14 +34,13 @@ const SingleBrandProduct = ({ product }) => {
                 </div>
                 <div className="card-actions justify-start">
                     <Link to={`/productDetails/${_id}`}>
-                        <button
-                            className="btn w-full px-6 rounded-full text-gray-600 bg-[#fcb41e] hover:bg-[#ff635c] hover:text-white text-xs md:text-lg font-medium md:font-medium  border-none">Details</button></Link>
+                        <button className="ctrl-standard flex items-center mx-auto md:mx-0 md:w-auto  fx-sliderIn btn rounded-full bg-[#fcb41e] hover:text-[#ff635c] hover:bg-[#fcb41e] text-xs md:text-base font-bold text-gray-800 px-7 hover:border-[#fd8f89]">Details</button></Link>
                     <Link to={`/updateProduct/${_id}`}>
-                        <button
-                            className="btn w-full px-6 rounded-full bg-[#ff635c] hover:bg-[#fcb41e] hover:text-black text-xs md:text-lg font-medium md:font-medium text-[#FFF]   border-none">Update</button></Link>
+                        <button className="ctrl-standard flex items-center mx-auto md:mx-0 md:w-auto  fx-sliderIn btn rounded-full bg-[#ff635c] hover:text-gray-700 hover:bg-[#ff635c] text-xs md:text-base font-bold text-white px-7 hover:border-[#fcb41e]">Update</button></Link>
+
                 </div>
             </div>
-            
+
         </div>
     );
 };

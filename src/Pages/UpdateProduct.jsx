@@ -150,8 +150,7 @@ const UpdateProduct = () => {
             </div>
             <NavLink onClick={navigateToPreviousPage}>
                 <div className="card-actions justify-center mt-5">
-                    <button
-                        className="btn px-6 rounded-full bg-[#ff635c] hover:bg-[#fcb41e] hover:text-black text-xs md:text-lg font-medium md:font-medium text-[#FFF]   border-none">Go Back</button>
+                    <button className="ctrl-standard flex items-center mx-auto md:mx-0 md:w-auto  fx-sliderIn btn rounded-full bg-black hover:text-black text-xs md:text-base font-medium md:font-extrabold text-[#FFF] px-7 hover:border-black">Go Back</button>
                 </div>
             </NavLink>
         </div>

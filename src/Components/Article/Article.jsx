@@ -23,10 +23,10 @@ const Article = () => {
                 <div className='flex flex-col lg:flex-row mx-3 md:mx-0 gap-6 rounded-lg border-0 md:border items-center'
                     data-aos="fade-down"
                     data-aos-duration="2000">
-                    <div className='h-full'>
-                        <img className='w-full object-cover' src={article1} alt="" />
+                    <div className='h-full  flex-1'>
+                        <img className=' w-full lg:w-[95%] h-full object-cover' src={article1} alt="" />
                     </div>
-                    <div className='px-6 space-y-6 my-3 lg:my-0 '>
+                    <div className='pr-6  pl-6 lg:pl-0 space-y-6 my-3 lg:my-0  flex-1 '>
                         <div className='flex justify-between'>
                             <p>20 July, 2023</p>
                             <p>Beauty
@@ -44,10 +44,10 @@ const Article = () => {
                 <div className='flex-col flex rounded-lg lg:flex-row mx-3 md:mx-0 gap-6 border-0 md:border items-center'
                     data-aos="fade-down"
                     data-aos-duration="2000">
-                    <div className='h-full'>
-                        <img className='w-full object-cover' src={article2} alt="" />
+                    <div className='h-full flex-1'>
+                        <img className='lg:w-[95%] w-full h-full object-cover' src={article2} alt="" />
                     </div>
-                    <div className='px-6 space-y-6 my-3 lg:my-0'>
+                    <div className='pr-6 pl-6 lg:pl-0 flex-1 space-y-6 my-3 lg:my-0'>
                         <div className='flex justify-between'>
                             <p>
                                 5 May, 2023</p>
@@ -66,10 +66,10 @@ const Article = () => {
                 <div className='flex-col flex rounded-lg lg:flex-row mx-3 md:mx-0 gap-6 border-0 md:border items-center'
                     data-aos="fade-up"
                     data-aos-duration="2000">
-                    <div className='h-full'>
-                        <img className='w-full object-cover' src={article3} alt="" />
+                    <div className='h-full flex-1'>
+                        <img className='lg:w-[95%] w-full h-full object-cover' src={article3} alt="" />
                     </div>
-                    <div className='px-6 space-y-6 my-3 lg:my-0'>
+                    <div className='pr-6 pl-6 lg:pl-0 flex-1 space-y-6 my-3 lg:my-0'>
                         <div className='flex justify-between'>
                             <p>20 June, 2023</p>
                             <p>Beauty
@@ -87,10 +87,10 @@ const Article = () => {
                 <div className='flex-col flex rounded-lg lg:flex-row mx-3 md:mx-0 gap-6 border-0 md:border items-center'
                     data-aos="fade-up"
                     data-aos-duration="2000">
-                    <div className='h-full'>
-                        <img className='w-full object-cover' src={article4} alt="" />
+                    <div className='h-full flex-1'>
+                        <img className='lg:w-[95%] w-full h-full object-cover' src={article4} alt="" />
                     </div>
-                    <div className='px-6 space-y-6 my-3 lg:my-0'>
+                    <div className='pr-6 pl-6 lg:pl-0 flex-1 space-y-6 my-3 lg:my-0'>
                         <div className='flex justify-between'>
                             <p>22 July, 2023</p>
                             <p>Beauty

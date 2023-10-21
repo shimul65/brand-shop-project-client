@@ -11,7 +11,7 @@ const ProductDetails = () => {
 
     const product = useLoaderData();
 
-    const {user} = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
     const email = user.email;
 
     const { _id, name, brand_name, product_type, ratting, price, photo, description } = product || {};
@@ -75,14 +75,13 @@ const ProductDetails = () => {
                     </div>
                     <div className="card-actions justify-start">
                         <Link onClick={handleAddToCart}>
-                            <button className="ctrl-standard flex items-center mx-auto md:mx-0  md:w-auto  fx-sliderIn btn rounded-full bg-black hover:text-black text-xs md:text-base font-medium md:font-extrabold text-[#FFF] px-7 hover:border-black">Add to Cart</button></Link>
+                            <button className="ctrl-standard flex items-center mx-auto md:mx-0 md:w-auto  fx-sliderIn btn rounded-full bg-[#ff635c] hover:text-gray-700 hover:bg-[#ff635c] text-xs md:text-base font-bold text-white px-7 hover:border-[#fcb41e]">Add to Cart</button></Link>
                     </div>
                 </div>
             </div>
             <NavLink onClick={navigateToPreviousPage}>
                 <div className="card-actions justify-center mt-5">
-                    <button
-                        className="btn px-6 rounded-full bg-[#ff635c] hover:bg-[#fcb41e] hover:text-black text-xs md:text-lg font-medium md:font-medium text-[#FFF]   border-none">Go Back</button>
+                    <button className="ctrl-standard flex items-center mx-auto md:mx-0 md:w-auto  fx-sliderIn btn rounded-full bg-black hover:text-black text-xs md:text-base font-medium md:font-extrabold text-[#FFF] px-7 hover:border-black">Go Back</button>
                 </div>
             </NavLink>
         </div>

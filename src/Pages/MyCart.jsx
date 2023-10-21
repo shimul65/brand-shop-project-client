@@ -40,7 +40,7 @@ const MyCart = () => {
                         if (data.deletedCount > 0) {
                             Swal.fire(
                                 'Deleted!',
-                                'Your Coffee has been deleted.',
+                                'Your cart item has been deleted.',
                                 'success'
                             )
                             const remaining = products?.filter(product => product._id !== _id);
@@ -76,14 +76,14 @@ const MyCart = () => {
                         ) : (
                             products?.map((product) => (
                                 <tr className="hover text-center" key={product._id}>
-                                    <td className="flex justify-center">
+                                    <td className="flex mx-auto lg:px-[28%]">
                                         <div className="flex items-center space-x-3">
                                             <div className="avatar">
                                                 <div className="mask mask-squircle w-12 h-12">
                                                     <img src={product?.photo} alt="product photo" />
                                                 </div>
                                             </div>
-                                            <div>
+                                            <div className="text-left">
                                                 <div className="font-bold text-base md:text-xl">{product?.name}</div>
                                             </div>
                                         </div>

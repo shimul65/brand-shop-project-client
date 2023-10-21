@@ -47,7 +47,7 @@ ul a.active {
     width: 100%;
 }
 
-
+/* Custom btn styles for Brands */
 .custom-btn {
     --c: white;
     color: var(--c);

@@ -1,5 +1,5 @@
 import toast from "react-hot-toast";
-import { Link, useNavigate, } from "react-router-dom";
+import { Link, useLocation, useNavigate, } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
@@ -11,6 +11,8 @@ const Register = () => {
     const { createUser, handleUpdateProfile } = useContext(AuthContext);
 
     const navigate = useNavigate();
+
+    const location = useLocation();
 
     //show password
     const [showPass, setShowPass] = useState(false);
@@ -24,6 +26,7 @@ const Register = () => {
         const photoURL = form.get('photoURL');
         const isAccepted = form.get('terms') === 'on';
 
+
         // password validation check
         if (password.length < 6) {
             toast.error('Password should be at least 6 characters or longer');
@@ -33,6 +36,7 @@ const Register = () => {
             toast.error('Your Password should contain an uppercase letter')
             return;
         }
+
         else if (!/[!@#%^&*()_+\-=\[\]{}|;\\':",.<>?~`]/.test(password)) {
             toast.error('Your Password should contain a special character');
             return;
@@ -53,7 +57,7 @@ const Register = () => {
                 // update profile
                 handleUpdateProfile(name, photoURL)
                     .then(() => {
-                        navigate('/');
+                        navigate(location?.state ? location.state : '/');
                         toast.success('User Sign Up Successfully')
                     }).catch((error) => {
                         console.log(error);

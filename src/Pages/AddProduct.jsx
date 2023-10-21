@@ -38,7 +38,6 @@ const AddProduct = () => {
     }
 
 
-
     return (
         <div className="container mx-auto my-10 md:my-20">
             <h2 className="mb-10 text-3xl md:text-5xl font-extrabold text-center">Add Product</h2>
